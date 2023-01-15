@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.spikeysanju.wiggles.view
+package com.example.nativeproject.view
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.FastOutSlowInEasing
@@ -24,8 +24,8 @@ import androidx.navigation.compose.navArgument
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.navigation.animation.composable
 import com.google.accompanist.navigation.animation.rememberAnimatedNavController
-import dev.spikeysanju.wiggles.data.FakeDogDatabase
-import dev.spikeysanju.wiggles.navigation.Screen
+import com.example.nativeproject.data.FakeDogDatabase
+import com.example.nativeproject.navigation.Screen
 
 @ExperimentalAnimationApi
 @Composable

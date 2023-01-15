@@ -1,44 +1,49 @@
 package com.example.nativeproject
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.nativeproject.ui.theme.NativeProjectTheme
-
-class MainActivity : ComponentActivity() {
+import com.example.nativeproject.ui.theme.MyTheme
+import com.example.nativeproject.view.WigglesMain
+@ExperimentalAnimationApi
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            NativeProjectTheme {
+            val currentTheme = isSystemInDarkTheme()
+            val toggleTheme: () -> Unit = {
+                if (currentTheme) setDayTheme() else setDarkTheme()
+            }
+            MyTheme {
                 // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Group Project Native!!!")
+                Surface(color = MaterialTheme.colors.background) {
+                    WigglesMain(toggleTheme)
                 }
             }
         }
     }
-}
-//This is comment
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    private fun setDayTheme() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+    }
+
+    private fun setDarkTheme() {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+    }
 }
 
-@Preview(showBackground = true)
+@ExperimentalAnimationApi
+@Preview("Dark Theme", widthDp = 360, heightDp = 640)
 @Composable
-fun DefaultPreview() {
-    NativeProjectTheme {
-        Greeting("Android")
+fun DarkPreview() {
+    MyTheme(darkTheme = true) {
+        WigglesMain(toggleTheme = { })
     }
 }
