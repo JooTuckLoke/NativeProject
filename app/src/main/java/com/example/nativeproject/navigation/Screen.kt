@@ -16,6 +16,7 @@
 package com.example.nativeproject.navigation
 
 import androidx.annotation.StringRes
+import com.example.nativeproject.R
 import dev.spikeysanju.wiggles.R
 
 sealed class Screen(val route: String, @StringRes val resourceId: Int) {
