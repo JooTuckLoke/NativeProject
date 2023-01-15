@@ -28,6 +28,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+//This is comment
 
 @Composable
 fun Greeting(name: String) {
