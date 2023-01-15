@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.spikeysanju.wiggles.view
+package com.example.nativeproject.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -48,11 +48,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import dev.spikeysanju.wiggles.R
-import dev.spikeysanju.wiggles.component.DogInfoCard
-import dev.spikeysanju.wiggles.component.InfoCard
-import dev.spikeysanju.wiggles.component.OwnerCard
-import dev.spikeysanju.wiggles.data.FakeDogDatabase
+import com.example.nativeproject.R
+import com.example.nativeproject.component.DogInfoCard
+import com.example.nativeproject.component.InfoCard
+import com.example.nativeproject.component.OwnerCard
+import com.example.nativeproject.data.FakeDogDatabase
 
 @Composable
 fun Details(navController: NavController, id: Int) {

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.spikeysanju.wiggles.component
+package com.example.nativeproject.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -42,8 +42,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import dev.spikeysanju.wiggles.R
-import dev.spikeysanju.wiggles.model.Dog
+import com.example.nativeproject.R
+import com.example.nativeproject.model.Dog
 
 @Composable
 fun ItemDogCard(dog: Dog, onItemClicked: (dog: Dog) -> Unit) {

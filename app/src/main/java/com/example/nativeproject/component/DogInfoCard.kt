@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package dev.spikeysanju.wiggles.component
+package com.example.nativeproject.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -34,7 +34,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import dev.spikeysanju.wiggles.R
+import com.example.nativeproject.R
 
 @Composable
 fun DogInfoCard(name: String, gender: String, location: String) {
